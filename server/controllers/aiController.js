@@ -424,7 +424,8 @@ export const resumeReview = async (req, res) => {
   const resume = req.file;
 
   try {
-    const userId = req.auth?.userId;
+    const authData = typeof req.auth === "function" ? req.auth() : req.auth;
+    const userId = authData?.userId;
     if (!userId) {
       if (resume?.path && fs.existsSync(resume.path)) {
         try { fs.unlinkSync(resume.path); } catch (_) {}

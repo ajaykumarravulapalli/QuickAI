@@ -6,7 +6,7 @@ import { useAuth } from '@clerk/clerk-react'
 import ReactMarkdown from "react-markdown"
 import remarkGfm from 'remark-gfm'
 
-axios.defaults.baseURL = import.meta.env.VITE_BASE_URL
+axios.defaults.baseURL = import.meta.env.VITE_BASE_URL || (import.meta.env.PROD ? 'https://quickai-m9q6.onrender.com' : 'http://localhost:3000');
 
 const ReviewResume = () => {
   const [file, setFile] = useState(null)

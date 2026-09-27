@@ -14,6 +14,18 @@ aiRouter.post("/generate-blog-title", auth, generateBlogTitle);
 aiRouter.post("/generate-image", auth, generateImage);
 aiRouter.post("/remove-image-background", upload.single('image'), auth, removeImagebackground);
 aiRouter.post("/remove-image-object",upload.single('image'), auth, removeImageObject);
-aiRouter.post("/resume-review",upload.single('resume'), auth, resumeReview);
+const handleResumeUpload = (req, res, next) => {
+  upload.single('resume')(req, res, (err) => {
+    if (err) {
+      return res.status(400).json({
+        success: false,
+        message: err.message || "Failed to process uploaded file.",
+      });
+    }
+    next();
+  });
+};
+
+aiRouter.post("/resume-review", handleResumeUpload, auth, resumeReview);
 
 export default aiRouter;

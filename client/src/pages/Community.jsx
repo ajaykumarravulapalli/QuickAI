@@ -4,7 +4,7 @@ import axios from 'axios'
 import { Heart } from 'lucide-react'
 import toast from 'react-hot-toast'
 
-axios.defaults.baseURL = import.meta.env.VITE_BASE_URL
+axios.defaults.baseURL = import.meta.env.VITE_BASE_URL || (import.meta.env.PROD ? 'https://quickai-m9q6.onrender.com' : 'http://localhost:3000');
 
 const Community = () => {
   const [creations, setCreations] = useState([])

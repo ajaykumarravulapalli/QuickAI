@@ -5,7 +5,7 @@ import { useAuth } from '@clerk/clerk-react'
 import { toast } from 'react-hot-toast'
 import Markdown from 'react-markdown'
 
-axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
+axios.defaults.baseURL = import.meta.env.VITE_BASE_URL || (import.meta.env.PROD ? 'https://quickai-m9q6.onrender.com' : 'http://localhost:3000');
 
 const BlogTitles = () => {
   const blogCategories = ['General', 'Technology', 'Business', 'Health', 'Lifestyle', 'Education', 'Travel', 'Food']
