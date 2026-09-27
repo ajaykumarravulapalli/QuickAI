@@ -7,11 +7,11 @@ import { ClerkProvider } from '@clerk/clerk-react'
 import axios from 'axios'
 
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL || (import.meta.env.PROD ? 'https://quickai-m9q6.onrender.com' : 'http://localhost:3000');
-// Import your Publishable Key
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+// Import your Publishable Key (supports environment variable or fallback)
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY || 'pk_test_cGxlYXNhbnQtYm94ZXItNy5jbGVyay5hY2NvdW50cy5kZXYk';
 
 if (!PUBLISHABLE_KEY) {
-  throw new Error('Missing Publishable Key')
+  throw new Error('Missing Publishable Key');
 }
 
 createRoot(document.getElementById('root')).render(
