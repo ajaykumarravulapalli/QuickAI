@@ -68,23 +68,23 @@ export const AiToolsData = [
 export const dummyTestimonialData = [
     {
         image: assets.profile_img_1,
-        name: 'John Doe',
-        title: 'Marketing Director, TechCorp',
-        content: 'ContentAI has revolutionized our content workflow. The quality of the articles is outstanding, and it saves us hours of work every week.',
-        rating: 4,
-    },
-    {
-        image: assets.profile_img_1,
-        name: 'Jane Smith',
-        title: 'Content Creator, TechCorp',
-        content: 'ContentAI has made our content creation process effortless. The AI tools have helped us produce high-quality content faster than ever before.',
+        name: 'Manoj Kumar',
+        title: 'Managing Director, TechNova',
+        content: 'QuickAI has transformed how our team operates. Drafting proposals, campaign copies, and strategy briefs is now 10x faster with consistently exceptional quality.',
         rating: 5,
     },
     {
         image: assets.profile_img_1,
-        name: 'David Lee',
-        title: 'Content Writer, TechCorp',
-        content: 'ContentAI has transformed our content creation process. The AI tools have helped us produce high-quality content faster than ever before.',
+        name: 'Narasimha Naidu',
+        title: 'Content Creator',
+        content: 'From generating stunning visuals to crafting viral hooks, QuickAI is my everyday creative partner. It keeps my workflow fast and my audience hooked.',
+        rating: 5,
+    },
+    {
+        image: assets.profile_img_1,
+        name: 'Janu',
+        title: 'Content Writer',
+        content: 'The depth and flow of the generated articles are remarkable. It cuts down my research hours and helps me deliver polished, publish-ready pieces effortlessly.',
         rating: 4,
     },
 ]
